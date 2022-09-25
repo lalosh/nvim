@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   ["nvim-blame-line"] = {
     loaded = true,
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/nvim-blame-line",

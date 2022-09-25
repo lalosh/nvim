@@ -49,6 +49,8 @@ return packer.startup(function(use)
   -- show git blame for each line alone
   use "tveskag/nvim-blame-line"
 
+  use "projekt0n/github-nvim-theme" 
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
