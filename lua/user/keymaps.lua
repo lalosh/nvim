@@ -26,13 +26,18 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<C-f>", ":Lex 30<cr>", opts)
+keymap("n", "<C-e>", ":Lex 30<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
+-- Allow adding empty line before and after the current line
+keymap("n", "<A-j>", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", opts)
+keymap("n", "<A-k>", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", opts)
+
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -68,3 +73,11 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 
 keymap("n", "<leader>s", ":wa<CR>", opts);
+
+
+
+keymap("n", "<c-p>", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>", opts)
+keymap("n", "<c-g>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<c-r>", "<cmd>Telescope lsp_references<cr>", opts)
+keymap("n", "<c-f>", "<cmd>Telescope grep_string<cr>", opts)
+

@@ -49,7 +49,7 @@ return packer.startup(function(use)
   -- show git blame for each line alone
   use "tveskag/nvim-blame-line"
 
-  use "projekt0n/github-nvim-theme" 
+  use "projekt0n/github-nvim-theme"
 
 
 
@@ -71,6 +71,9 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  --use 'nvim-telescope/telescope-media-files.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
