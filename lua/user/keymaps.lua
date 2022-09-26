@@ -82,4 +82,7 @@ keymap("n", "<c-r>", "<cmd>Telescope lsp_references<cr>", opts)
 keymap("n", "<c-f>", "<cmd>Telescope grep_string<cr>", opts)
 
 keymap("n", "<C-e>", ":NvimTreeToggle<cr>", opts)
-keymap("n", "<C-d>", ":NvimTreeFindFile<cr>", opts)
+keymap("n", "<C-t>", ":NvimTreeFindFile<cr>", opts)
+
+
+keymap("n", "<leader>f", ":Format<cr>", opts)

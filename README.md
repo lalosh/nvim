@@ -27,6 +27,7 @@ sudo dnf install python3-devel libx11-devel
 install c/c++ related
 https://developer.fedoraproject.org/tech/languages/c/c_installation.html
 
+npm i -g eslint
 
 ## Resources
 
