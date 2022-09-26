@@ -5,4 +5,3 @@ require "user/nvim-blame-line"
 require "user/colorscheme"
 require "user/cmp"
 require "user/lsp"
-
