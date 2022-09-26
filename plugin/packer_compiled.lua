@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
     url = "https://github.com/projekt0n/github-nvim-theme"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["nvim-blame-line"] = {
     loaded = true,
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/nvim-blame-line",
@@ -139,10 +144,25 @@ _G.packer_plugins = {
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
+    url = "https://github.com/p00f/nvim-ts-rainbow"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  playground = {
+    loaded = true,
+    path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
