@@ -1,8 +1,8 @@
- local status_ok, blamExtension = pcall(require, "tveskag/nvim-blame-line")
- if not status_ok then
-    vim.notify("tveskag/nvim-blame-line plugin is not installed")
-    return
-end
+ --local status_ok, blamExtension = pcall(require, "tveskag/nvim-blame-line")
+ --if not status_ok then
+--    vim.notify("tveskag/nvim-blame-line plugin is not installed")
+--    return
+-- end
 
 local opts = { noremap = true, silent = true }
 
