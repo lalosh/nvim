@@ -86,3 +86,10 @@ keymap("n", "<C-t>", ":NvimTreeFindFile<cr>", opts)
 
 
 keymap("n", "<leader>f", ":Format<cr>", opts)
+
+
+-- renamer
+keymap('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+keymap('n', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+keymap('v', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+

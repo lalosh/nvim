@@ -1,4 +1,3 @@
-
 local fn = vim.fn
 
 -- Automatically install packer
@@ -91,17 +90,34 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
-  -- tree 
+  -- tree
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
 
   -- bufferline
-  use "akinsho/bufferline.nvim"
+  -- use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
 
 
   use 'nvim-lualine/lualine.nvim'
   use "akinsho/toggleterm.nvim"
+
+  -- colors
+  use "marko-cerovac/material.nvim"
+  use "Mofiqul/vscode.nvim"
+  use "sainnhe/sonokai"
+
+
+  -- rename
+  use 'nvim-lua/plenary.nvim'
+  use {
+    'filipdutescu/renamer.nvim',
+    branch = 'master',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  }
+
+
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
