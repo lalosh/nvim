@@ -71,7 +71,7 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
   -- related to lsp
-  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
 
   -- Telescope
@@ -115,7 +115,6 @@ return packer.startup(function(use)
     branch = 'master',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-
 
 
 

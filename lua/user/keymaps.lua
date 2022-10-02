@@ -85,7 +85,7 @@ keymap("n", "<C-e>", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<C-t>", ":NvimTreeFindFile<cr>", opts)
 
 
-keymap("n", "<leader>f", ":Format<cr>", opts)
+keymap("n", "<F3>", "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", opts)
 
 
 -- renamer
