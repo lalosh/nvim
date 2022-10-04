@@ -14,3 +14,9 @@ require "user/null-ls"
 require "user/lualine"
 require "user/toggleterm"
 require "user/renamer"
+require "user/symbols-outline"
+
+
+require'colorizer'.setup()
+
+require('neoscroll').setup()

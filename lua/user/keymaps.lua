@@ -1,4 +1,3 @@
-
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
@@ -78,7 +77,7 @@ keymap("n", "<leader>s", ":wa<CR>", opts);
 
 keymap("n", "<c-p>", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>", opts)
 keymap("n", "<c-g>", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<c-r>", "<cmd>Telescope lsp_references<cr>", opts)
+keymap("n", "<c-y>", "<cmd>Telescope lsp_references<cr>", opts)
 keymap("n", "<c-f>", "<cmd>Telescope grep_string<cr>", opts)
 
 keymap("n", "<C-e>", ":NvimTreeToggle<cr>", opts)
@@ -93,3 +92,7 @@ keymap('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true
 keymap('n', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 keymap('v', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 
+
+keymap("n", "<F9>", ":Gitsigns next_hunk<cr>", opts)
+keymap("n", "<F10>", ":SymbolsOutline<cr>", opts)
+keymap("n", "<F11>", ":Twilight<cr>", opts)

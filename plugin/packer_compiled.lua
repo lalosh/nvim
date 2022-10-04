@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
   },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
   ["nvim-blame-line"] = {
     loaded = true,
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/nvim-blame-line",
@@ -143,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/NvChad/nvim-colorizer.lua"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
@@ -204,6 +214,11 @@ _G.packer_plugins = {
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/sonokai",
     url = "https://github.com/sainnhe/sonokai"
   },
+  ["symbols-outline.nvim"] = {
+    loaded = true,
+    path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
+    url = "https://github.com/simrat39/symbols-outline.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -213,6 +228,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["twilight.nvim"] = {
+    config = { "\27LJ\2\nô\1\0\0\5\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\0025\3\b\0=\3\t\0024\3\0\0=\3\n\2B\0\2\1K\0\1\0\fexclude\vexpand\1\5\0\0\rfunction\vmethod\ntable\17if_statement\fdimming\1\0\2\15treesitter\2\fcontext\3\n\ncolor\1\3\0\0\vNormal\f#ffffff\1\0\3\nalpha\4\0€€Àþ\3\fterm_bg\f#000000\rinactive\1\nsetup\rtwilight\frequire\0" },
+    loaded = true,
+    path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/twilight.nvim",
+    url = "https://github.com/folke/twilight.nvim"
   },
   ["vim-bbye"] = {
     loaded = true,
@@ -227,6 +248,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: twilight.nvim
+time([[Config for twilight.nvim]], true)
+try_loadstring("\27LJ\2\nô\1\0\0\5\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\0025\3\b\0=\3\t\0024\3\0\0=\3\n\2B\0\2\1K\0\1\0\fexclude\vexpand\1\5\0\0\rfunction\vmethod\ntable\17if_statement\fdimming\1\0\2\15treesitter\2\fcontext\3\n\ncolor\1\3\0\0\vNormal\f#ffffff\1\0\3\nalpha\4\0€€Àþ\3\fterm_bg\f#000000\rinactive\1\nsetup\rtwilight\frequire\0", "config", "twilight.nvim")
+time([[Config for twilight.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
