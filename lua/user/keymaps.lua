@@ -41,6 +41,7 @@ keymap("n", "<A-k>", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-p>", ":BufferLinePick<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -95,4 +96,17 @@ keymap('v', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true
 
 keymap("n", "<F9>", ":Gitsigns next_hunk<cr>", opts)
 keymap("n", "<F10>", ":SymbolsOutline<cr>", opts)
-keymap("n", "<F11>", ":Twilight<cr>", opts)
+keymap("n", "<F12>", ":Twilight<cr>", opts)
+
+-- quick fix list controls
+keymap("n", "<F5>", ":copen<cr>", opts)
+keymap("n", "<F6>", ":ccl<cr>", opts)
+keymap("n", "<F7>", ":cn<cr>", opts)
+keymap("n", "<F8>", ":cp<cr>", opts)
+
+keymap("n","<F4>","<cmd>lua vim.diagnostic.setqflist()<cr>",opts);
+
+-- bufferline control
+-- keymap("n", "<c-<>", ":BufferLineMovePrev<cr>", opts)
+-- keymap("n", "<c->>", ":BufferLineCloseRight<cr>", opts)
+

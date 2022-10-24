@@ -95,7 +95,7 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
 
   -- bufferline
-  -- use "akinsho/bufferline.nvim"
+   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
 
 
@@ -119,6 +119,9 @@ return packer.startup(function(use)
 
   -- oultine each function
   use 'simrat39/symbols-outline.nvim'
+
+  -- one dark theme
+use "olimorris/onedarkpro.nvim"
 
   -- colorize hex strings
   use 'NvChad/nvim-colorizer.lua'
