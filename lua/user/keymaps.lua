@@ -37,6 +37,9 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<A-j>", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", opts)
 keymap("n", "<A-k>", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", opts)
 
+-- lalosh 
+-- comment jsx
+keymap("n", "<A-C>", "0wi{/*^[wvat^[lbA*/}^[0w", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
