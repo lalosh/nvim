@@ -48,3 +48,4 @@ vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd "set spell"
 vim.cmd "set spelllang=en"
+

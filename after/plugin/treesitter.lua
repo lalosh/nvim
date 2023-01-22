@@ -1,7 +1,7 @@
 local configs = require("nvim-treesitter.configs")
 
 configs.setup {
-  ensure_installed = "all",
+  ensure_installed = { "javascript", "typescript", "json", "help", "lua" },
   sync_install = false, 
   ignore_install = { "" }, -- List of parsers to ignore installing
   highlight = {
@@ -21,6 +21,6 @@ configs.setup {
     -- termcolors = {} -- table of colour name strings
   },
   playground = {
-    enable = true
+    enable = false
   }
 }

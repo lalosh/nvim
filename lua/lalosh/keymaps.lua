@@ -37,15 +37,14 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<A-j>", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", opts)
 keymap("n", "<A-k>", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", opts)
 
+-- comment jsx
+keymap("n", "<A-C>", "0wi{/*^[wvat^[lbA*/}^[0w", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-p>", ":BufferLinePick<CR>", opts)
 
--- Insert --
--- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -72,19 +71,21 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 
+-- save all files on space-s
 keymap("n", "<leader>s", ":wa<CR>", opts);
 
 
-
+-- telescope
 keymap("n", "<c-p>", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>", opts)
 keymap("n", "<c-g>", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<c-y>", "<cmd>Telescope lsp_references<cr>", opts)
 keymap("n", "<c-f>", "<cmd>Telescope grep_string<cr>", opts)
 
+-- tree
 keymap("n", "<C-e>", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<C-t>", ":NvimTreeFindFile<cr>", opts)
 
-
+-- autoformat
 keymap("n", "<F3>", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
 
 
@@ -104,9 +105,9 @@ keymap("n", "<F6>", ":ccl<cr>", opts)
 keymap("n", "<F7>", ":cn<cr>", opts)
 keymap("n", "<F8>", ":cp<cr>", opts)
 
+-- open quick fix list
 keymap("n","<F4>","<cmd>lua vim.diagnostic.setqflist()<cr>",opts);
 
 -- bufferline control
 -- keymap("n", "<c-<>", ":BufferLineMovePrev<cr>", opts)
 -- keymap("n", "<c->>", ":BufferLineCloseRight<cr>", opts)
-

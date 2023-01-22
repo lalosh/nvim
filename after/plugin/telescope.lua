@@ -68,7 +68,6 @@ telescope.setup {
         ["<Up>"] = actions.move_selection_previous,
         ["gg"] = actions.move_to_top,
         ["G"] = actions.move_to_bottom,
-
         ["<C-u>"] = actions.preview_scrolling_up,
         ["<C-d>"] = actions.preview_scrolling_down,
 
@@ -102,3 +101,4 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
+
