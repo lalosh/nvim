@@ -141,6 +141,10 @@ require("mason-lspconfig").setup_handlers {
     lspconfig.tsserver.setup {
       on_attach = on_attach,
       capabilities = capabilities,
+      init_options = {
+        --preferences = { includeCompletionsForModuleExports = false }
+      }
+
     }
   end,
 
