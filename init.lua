@@ -1,2 +1,2 @@
-require("lalosh/init")
+require("lalosh")
 
