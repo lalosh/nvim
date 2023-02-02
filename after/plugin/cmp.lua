@@ -71,8 +71,8 @@ cmp.setup {
 		["<C-j>"] = cmp.mapping.select_next_item(),
 
     -- scroll for very long menu snippet 
-    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
+    --["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
+    --["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
 
     -- popup every possible compleltion possible
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),

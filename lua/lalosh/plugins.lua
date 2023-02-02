@@ -47,7 +47,7 @@ return packer.startup(function(use)
 
 
 
- -- Telescope
+  -- Telescope
   use "nvim-telescope/telescope.nvim"
 
 
@@ -71,14 +71,14 @@ return packer.startup(function(use)
   use 'karb94/neoscroll.nvim'
 
 
-    -- cmp plugins
+  -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp" 
-  
+  use "hrsh7th/cmp-nvim-lsp"
+
   -- cmp source
   use 'L3MON4D3/LuaSnip'
   use "rafamadriz/friendly-snippets"
@@ -93,6 +93,9 @@ return packer.startup(function(use)
 
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
+
+  use "gennaro-tedesco/nvim-peekup"
+  use 'tveskag/nvim-blame-line'
 
 
   -- Automatically set up your configuration after cloning packer.nvim

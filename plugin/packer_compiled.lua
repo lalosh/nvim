@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
   },
+  ["nvim-blame-line"] = {
+    loaded = true,
+    path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/nvim-blame-line",
+    url = "https://github.com/tveskag/nvim-blame-line"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -143,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-peekup"] = {
+    loaded = true,
+    path = "/home/lalosh/.local/share/nvim/site/pack/packer/start/nvim-peekup",
+    url = "https://github.com/gennaro-tedesco/nvim-peekup"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
