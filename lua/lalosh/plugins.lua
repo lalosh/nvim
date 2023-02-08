@@ -98,6 +98,19 @@ return packer.startup(function(use)
   use 'tveskag/nvim-blame-line'
 
 
+  use {
+    "smjonas/inc-rename.nvim",
+    config = function()
+      require("inc_rename").setup()
+    end,
+  }
+
+  use {
+    'filipdutescu/renamer.nvim',
+    branch = 'master',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

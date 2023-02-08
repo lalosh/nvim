@@ -80,6 +80,7 @@ keymap("n", "<c-p>", "<cmd>lua require'telescope.builtin'.find_files(require('te
 keymap("n", "<c-g>", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<c-y>", "<cmd>Telescope lsp_references<cr>", opts)
 keymap("n", "<c-f>", "<cmd>Telescope grep_string<cr>", opts)
+keymap("n", "<c-s>", "<cmd>Telescope lsp_document_symbols<cr>", opts)
 
 -- tree
 keymap("n", "<C-e>", ":NvimTreeToggle<cr>", opts)
