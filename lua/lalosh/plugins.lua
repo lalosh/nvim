@@ -83,15 +83,20 @@ return packer.startup(function(use)
   -- files finder
   --use "nvim-telescope/telescope.nvim"
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.2',
+    'nvim-telescope/telescope.nvim', tag = '0.1.2', -- TODO: update later: it looks like the newest version have some bug currenlty
   }
   use 'nvim-telescope/telescope-media-files.nvim'
 
+
+  -- add tree-sitter colors (coloring each identifier properly)
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
 
+  -- file explorer
+  use 'kyazdani42/nvim-web-devicons'
+  use 'kyazdani42/nvim-tree.lua'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
