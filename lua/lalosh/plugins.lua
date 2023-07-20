@@ -27,7 +27,7 @@ vim.cmd [[
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-    vim.notify("packer not installed")
+  vim.notify("packer not installed")
   return
 end
 
@@ -42,12 +42,11 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-
-  -- packer 
+  -- packer
   use "wbthomason/packer.nvim" -- Have packer manage itself
 
   -- utils used by others plugins
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/popup.nvim"   -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
   -- color scheme
@@ -55,13 +54,13 @@ return packer.startup(function(use)
 
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "hrsh7th/nvim-cmp"         -- The completion plugin
+  use "hrsh7th/cmp-buffer"       -- buffer completions
+  use "hrsh7th/cmp-path"         -- path completions
+  use "hrsh7th/cmp-cmdline"      -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp" -- wire lsp results into cmp menu
-  use "hrsh7th/cmp-nvim-lua" -- get vim api from lua file via `vim.` 
+  use "hrsh7th/cmp-nvim-lsp"     -- wire lsp results into cmp menu
+  use "hrsh7th/cmp-nvim-lua"     -- get vim api from lua file via `vim.`
 
   -- cmp source
   use 'L3MON4D3/LuaSnip'
@@ -69,7 +68,7 @@ return packer.startup(function(use)
 
   use "David-Kunz/cmp-npm"
   use "tamago324/cmp-zsh"
-  use "Shougo/deol.nvim" 
+  use "Shougo/deol.nvim"
 
   use {
     "williamboman/mason.nvim",
