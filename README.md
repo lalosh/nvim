@@ -4,6 +4,14 @@
 - Config files should be placed in
     ~/.config/nvim
 
+
+## Pre-installation
+
+```sh
+ sudo pacman -S ripgrep
+ sudo pacman -S fd
+```
+
 References:
 
 - youtube series "Neovim as an IDE"

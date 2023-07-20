@@ -76,7 +76,12 @@ return packer.startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
+  -- add inlay hints support for the LSP that support it
   use "lvimuser/lsp-inlayhints.nvim"
+
+
+  -- files finder
+  use "nvim-telescope/telescope.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
