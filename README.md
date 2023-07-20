@@ -10,6 +10,7 @@
 ```sh
  sudo pacman -S ripgrep
  sudo pacman -S fd
+ sudo pacman -S chafa
 ```
 
 References:
