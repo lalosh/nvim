@@ -76,6 +76,8 @@ return packer.startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
+  use "lvimuser/lsp-inlayhints.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
