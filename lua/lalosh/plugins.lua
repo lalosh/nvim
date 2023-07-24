@@ -102,6 +102,14 @@ return packer.startup(function(use)
   use 'kana/vim-textobj-user'
   use 'whatyouhide/vim-textobj-xmlattr'
 
+  use "lewis6991/gitsigns.nvim"
+
+  use {
+    "smjonas/inc-rename.nvim",
+    config = function()
+      require("inc_rename").setup()
+    end,
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
