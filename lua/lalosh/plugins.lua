@@ -103,6 +103,7 @@ return packer.startup(function(use)
   use 'whatyouhide/vim-textobj-xmlattr'
 
   use "lewis6991/gitsigns.nvim"
+  use 'junegunn/vim-peekaboo'
 
   use {
     "smjonas/inc-rename.nvim",
