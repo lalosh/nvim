@@ -9,7 +9,14 @@ require("formatter").setup {
     },
     javascriptreact = {
       require("formatter.filetypes.javascriptreact").prettierd
-    }
+    },
+
+    typescrip= {
+      require("formatter.filetypes.javascriptreact").prettierd
+    },
+    typescriptreact = {
+      require("formatter.filetypes.javascriptreact").prettierd
+    },
 
   }
 }
