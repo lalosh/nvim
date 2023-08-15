@@ -76,6 +76,9 @@ return packer.startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
+  -- to hook a system-binary formatter into neovim
+  use 'mhartington/formatter.nvim'
+
   -- add inlay hints support for the LSP that support it
   use "lvimuser/lsp-inlayhints.nvim"
 
@@ -95,8 +98,8 @@ return packer.startup(function(use)
   }
 
   -- file explorer
-  use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
+  use 'nvim-tree/nvim-web-devicons'
+  use 'nvim-tree/nvim-tree.lua'
 
   -- add text object for xml attributes
   use 'kana/vim-textobj-user'
@@ -111,6 +114,8 @@ return packer.startup(function(use)
       require("inc_rename").setup()
     end,
   }
+
+  use 'tree-sitter/tree-sitter-embedded-template'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

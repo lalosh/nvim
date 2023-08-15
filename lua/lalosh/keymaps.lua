@@ -72,6 +72,7 @@ keymap("n", "<leader>z", ":ZenMode<CR>", opts);
 keymap("n", "<leader>s", ":wa<CR>", opts);
 
 
+
 -- telescope
 keymap("n", "<c-p>", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>", opts)
 keymap("n", "<c-g>", "<cmd>Telescope live_grep<cr>", opts)
@@ -82,13 +83,6 @@ keymap("n", "<c-s>", "<cmd>Telescope lsp_document_symbols<cr>", opts)
 -- tree
 keymap("n", "<C-e>", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<C-t>", ":NvimTreeFindFile<cr>", opts)
-
-
-
--- renamer
-keymap('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
-keymap('n', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
-keymap('v', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 
 
 keymap("n", "<F9>", ":Gitsigns next_hunk<cr>", opts)
@@ -104,6 +98,13 @@ keymap("n", "<F8>", ":cp<cr>", opts)
 -- open quick fix list
 keymap("n","<F4>","<cmd>lua vim.diagnostic.setqflist()<cr>",opts);
 
--- bufferline control
--- keymap("n", "<c-<>", ":BufferLineMovePrev<cr>", opts)
--- keymap("n", "<c->>", ":BufferLineCloseRight<cr>", opts)
+
+keymap("n", "<leader>f", ":FormatWrite<CR>", opts);
+
+-- auto format on save
+vim.cmd [[ 
+  augroup FormatAutogroup
+    autocmd!
+    autocmd BufWritePost * FormatWrite
+  augroup END
+]]
