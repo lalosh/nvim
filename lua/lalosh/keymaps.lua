@@ -102,9 +102,9 @@ keymap("n","<F4>","<cmd>lua vim.diagnostic.setqflist()<cr>",opts);
 keymap("n", "<leader>f", ":FormatWrite<CR>", opts);
 
 -- auto format on save
-vim.cmd [[ 
-  augroup FormatAutogroup
-    autocmd!
-    autocmd BufWritePost * FormatWrite
-  augroup END
-]]
+--vim.cmd [[ 
+ -- augroup FormatAutogroup
+--  autocmd!
+--    autocmd BufWritePost * FormatWrite
+ -- augroup END
+--]]
