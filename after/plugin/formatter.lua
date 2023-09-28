@@ -4,6 +4,9 @@ require("formatter").setup {
   log_level = vim.log.levels.WARN,
   filetype = {
 
+    html = {
+      require("formatter.filetypes.html").prettierd
+    },
     javascript = {
       require("formatter.filetypes.javascriptreact").prettierd
     },

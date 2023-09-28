@@ -124,6 +124,9 @@ end
 
 nvim_tree.setup {
   on_attach = on_attach,
+  view = {
+    width = 50
+  }
 }
 
 -- auto close the tree
