@@ -84,14 +84,7 @@ keymap("n", "<c-s>", "<cmd>Telescope lsp_document_symbols<cr>", opts)
 keymap("n", "<C-e>", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<C-t>", ":NvimTreeFindFile<cr>", opts)
 
---keymap("n", "<A-1>", "zm<CR>", opts);
---keymap("n", "<A-2>", "zR<CR>", opts);
---keymap("n", "<A-3>", "zc<CR>", opts);
---keymap("n", "<A-4>", "zo<CR>", opts);
-
 keymap("n", "<F9>", ":Gitsigns next_hunk<cr>", opts)
---keymap("n", "<F10>", ":SymbolsOutline<cr>", opts)
---keymap("n", "<F12>", ":Twilight<cr>", opts)
 
 -- quick fix list controls
 keymap("n", "<F5>", ":copen<cr>", opts)
@@ -104,7 +97,7 @@ keymap("n","<F4>","<cmd>lua vim.diagnostic.setqflist()<cr>",opts);
 
 
 keymap("n", "<leader>f", ":FormatWrite<CR>", opts);
-
+keymap("n", "<F10>", ":TrailBlazerToggleTrailMarkList<CR>", opts);
 -- auto format on save
 --vim.cmd [[ 
  -- augroup FormatAutogroup
