@@ -13,6 +13,7 @@ require("trailblazer").setup(
         -- are always visible and don't get overshadowed.
         trail_mark_priority = 10001,
         -- Available modes to cycle through. Remove any you don't need.
+
         available_trail_mark_modes = {
             "global_chron",
             "global_buf_line_sorted",
@@ -33,10 +34,10 @@ require("trailblazer").setup(
         trail_mark_list_rows = 10, -- number of rows to show in the trail mark list
         verbose_trail_mark_select = true, -- print current mode notification on mode change
         mark_symbol = "•", --  will only be used if trail_mark_symbol_line_indicators_enabled = true
-        newest_mark_symbol = "⬤", -- disable this mark symbol by setting its value to ""
-        cursor_mark_symbol = "⬤", -- disable this mark symbol by setting its value to ""
-        next_mark_symbol = "⬤", -- disable this mark symbol by setting its value to ""
-        previous_mark_symbol = "⬤", -- disable this mark symbol by setting its value to ""
+        newest_mark_symbol = "", -- disable this mark symbol by setting its value to ""
+        cursor_mark_symbol = "", -- disable this mark symbol by setting its value to ""
+        next_mark_symbol = "󱞩", -- disable this mark symbol by setting its value to ""
+        previous_mark_symbol = "󱞧", -- disable this mark symbol by setting its value to ""
         multiple_mark_symbol_counters_enabled = true,
         number_line_color_enabled = true,
         trail_mark_in_text_highlights_enabled = true,

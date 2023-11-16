@@ -41,6 +41,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-p>", ":BufferLinePick<CR>", opts)
 
 
+
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
@@ -73,8 +74,9 @@ keymap("n", "<leader>s", ":wa<CR>", opts);
 
 
 
+
 -- telescope
-keymap("n", "<c-p>", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>", opts)
+keymap("n", "<c-p>", "<cmd>lua require'telescope.builtin'.find_files({ hidden=true })<cr>", opts)
 keymap("n", "<c-g>", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<c-y>", "<cmd>Telescope lsp_references<cr>", opts)
 keymap("n", "<c-f>", "<cmd>Telescope grep_string<cr>", opts)
@@ -97,7 +99,12 @@ keymap("n","<F4>","<cmd>lua vim.diagnostic.setqflist()<cr>",opts);
 
 
 keymap("n", "<leader>f", ":FormatWrite<CR>", opts);
+
+
 keymap("n", "<F10>", ":TrailBlazerToggleTrailMarkList<CR>", opts);
+keymap("n", "<F11>", ":TrailBlazerSwitchNextTrailMarkStack<CR>", opts);
+
+
 -- auto format on save
 --vim.cmd [[ 
  -- augroup FormatAutogroup
