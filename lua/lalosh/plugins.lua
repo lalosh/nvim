@@ -86,7 +86,7 @@ return packer.startup(function(use)
   -- files finder
   --use "nvim-telescope/telescope.nvim"
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.2', -- TODO: update later: it looks like the newest version have some bug currenlty
+    'nvim-telescope/telescope.nvim',  --tag = '0.1.2', -- TODO: update later: it looks like the newest version have some bug currenlty
   }
   use 'nvim-telescope/telescope-media-files.nvim'
 

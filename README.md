@@ -13,6 +13,14 @@
  sudo pacman -S chafa
 ```
 
+
+
+To fix markdown issue in nvim-treesitter
+
+```
+:TSInstall markdown markdown_inline
+```
+
 References:
 
 - youtube series "Neovim as an IDE"
