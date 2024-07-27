@@ -52,7 +52,11 @@ return packer.startup(function(use)
   -- color scheme
   use "sainnhe/sonokai"
 
-
+  use { 'kaiuri/nvim-juliana',
+    config = function()
+      require 'nvim-juliana'.setup { --[=[ configuration --]=] }
+    end
+  }
   -- cmp plugins
   use "hrsh7th/nvim-cmp"         -- The completion plugin
   use "hrsh7th/cmp-buffer"       -- buffer completions
@@ -132,6 +136,8 @@ return packer.startup(function(use)
 
 
   use 'LeonHeidelbach/trailblazer.nvim'
+
+  use 'voldikss/vim-floaterm'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

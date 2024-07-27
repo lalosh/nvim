@@ -71,6 +71,7 @@ keymap("n", "<leader>z", ":ZenMode<CR>", opts);
 
 -- save all files on space-s
 keymap("n", "<leader>s", ":wa<CR>", opts);
+keymap("n", "<BS>", "<C-^>", opts);
 
 
 
@@ -96,6 +97,7 @@ keymap("n", "<F8>", ":cp<cr>", opts)
 
 -- open quick fix list
 keymap("n","<F4>","<cmd>lua vim.diagnostic.setqflist()<cr>",opts);
+keymap("n","<F2>",":let @* = expand(\"%\")<cr>",opts);
 
 
 keymap("n", "<leader>f", ":FormatWrite<CR>", opts);

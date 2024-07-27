@@ -43,4 +43,17 @@ M.settings = function()
 end
 
 
+local opts = { noremap = true, silent = true }
+
+
+-- Shorten function name
+local keymap = vim.api.nvim_set_keymap
+
+local function lsp_organize_imports()
+  local params = { command = "_typescript.organizeImports", arguments = { vim.api.nvim_buf_get_name(0) }, title = "" }
+  vim.lsp.buf.execute_command(params)
+end
+
+vim.keymap.set("n", "gO", lsp_organize_imports, opts);
+
 return M
