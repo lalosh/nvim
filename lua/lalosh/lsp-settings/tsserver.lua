@@ -10,7 +10,7 @@ local shared_lsp_settings = require("lalosh.lsp-settings.shared")
 local M = {}
 
 M.settings = function()
-  lspconfig.tsserver.setup {
+  lspconfig.ts_ls.setup {
     on_attach = shared_lsp_settings.on_attach,
     capabilities = shared_lsp_settings.capabilities,
     settings = {

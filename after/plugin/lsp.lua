@@ -25,6 +25,6 @@ require("mason-lspconfig").setup_handlers {
 
   ["jsonls"] = jsonls_lsp_settings,
   ["lua_ls"] = luals_lsp_settings,
-  ["tsserver"] = tsserver_lsp_settings,
+  ["ts_ls"] = tsserver_lsp_settings,
 
 }
