@@ -67,8 +67,6 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
-keymap("n", "<leader>z", ":ZenMode<CR>", opts);
-
 -- save all files on space-s
 keymap("n", "<leader>s", ":wa<CR>", opts);
 keymap("n", "<BS>", "<C-^>", opts);
@@ -106,6 +104,9 @@ keymap("n", "<leader>f", ":FormatWrite<CR>", opts);
 keymap("n", "<F10>", ":TrailBlazerToggleTrailMarkList<CR>", opts);
 keymap("n", "<F11>", ":TrailBlazerSwitchNextTrailMarkStack<CR>", opts);
 
+-- codeium related
+keymap("i", "<c-;>", "codeium#Accept()", { expr = true })
+--keymap("i", "<c-]>", "codeium#Cycle()", { expr = true })
 
 -- auto format on save
 --vim.cmd [[ 
