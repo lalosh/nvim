@@ -105,8 +105,10 @@ keymap("n", "<F10>", ":TrailBlazerToggleTrailMarkList<CR>", opts);
 keymap("n", "<F11>", ":TrailBlazerSwitchNextTrailMarkStack<CR>", opts);
 
 -- codeium related
-keymap("i", "<c-;>", "codeium#Accept()", { expr = true })
---keymap("i", "<c-]>", "codeium#Cycle()", { expr = true })
+keymap("i", "<C-;>", "codeium#Accept()", { expr = true })
+
+-- rename
+keymap("n", "<leader>r", ":IncRename ", opts);
 
 -- auto format on save
 --vim.cmd [[ 

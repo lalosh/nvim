@@ -54,11 +54,6 @@ return packer.startup(function(use)
   -- color scheme
   use "sainnhe/sonokai"
 
-  use { 'kaiuri/nvim-juliana',
-    config = function()
-      require 'nvim-juliana'.setup { --[=[ configuration --]=] }
-    end
-  }
   -- cmp plugins
   use "hrsh7th/nvim-cmp"         -- The completion plugin
   use "hrsh7th/cmp-buffer"       -- buffer completions
@@ -117,7 +112,9 @@ return packer.startup(function(use)
   use {
     "smjonas/inc-rename.nvim",
     config = function()
-      require("inc_rename").setup()
+      require("inc_rename").setup({
+        save_in_cmdline_history = true,
+      })
     end,
   }
 
