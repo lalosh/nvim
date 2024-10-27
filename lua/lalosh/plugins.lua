@@ -51,6 +51,7 @@ return packer.startup(function(use)
 
   use "Exafunction/codeium.vim";
 
+  use { "catppuccin/nvim", as = "catppuccin" }
   -- color scheme
   use "sainnhe/sonokai"
 
