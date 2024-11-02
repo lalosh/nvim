@@ -101,7 +101,7 @@ return packer.startup(function(use)
 
   -- file explorer
   use 'nvim-tree/nvim-web-devicons'
-  use 'nvim-tree/nvim-tree.lua'
+  use {'nvim-tree/nvim-tree.lua', }
 
   -- add text object for xml attributes
   use 'kana/vim-textobj-user'
