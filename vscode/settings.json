@@ -1,0 +1,105 @@
+{
+  "window.commandCenter": true,
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "editor.fontFamily": "'Hack Nerd Font', 'Hack', monospace",
+  "editor.fontLigatures": true,
+  "editor.guides.indentation": false,
+  "editor.lineNumbers": "off",
+  "terminal.integrated.automationProfile.linux": {},
+  "editor.fontSize": 14,
+  "editor.smoothScrolling": true,
+  "editor.scrollBeyondLastLine": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorStyle": "underline",
+  "editor.scrollbar.vertical": "auto",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "entity.name.type.enum",
+        "settings": {
+          "foreground": "#f3d398"
+        }
+      },
+      {
+        "scope": "variable.other.constant.object.ts",
+        "settings": {
+          "foreground": "#ffa577"
+        }
+      },
+      {
+        "scope": "entity.name.function",
+        "settings": {
+          "fontStyle": "normal"
+        }
+      },
+      {
+        "scope": "support.class.component.tsx",
+        "settings": {
+          "foreground": "#80aefa"
+        }
+      },
+      {
+        "scope": "keyword.control.import.tsx",
+        "settings": {
+          "foreground": "#ffbbe8"
+        }
+      },
+
+      {
+        "scope": "keyword.control.from.tsx",
+        "settings": {
+          "foreground": "#ffbbe8"
+        }
+      },
+      {
+        "scope": "storage.type.tsx",
+        "settings": {
+          "foreground": "#f8c4c5"
+        }
+      }
+    ]
+  },
+  "explorer.decorations.badges": false,
+  "explorer.openEditors.sortOrder": "alphabetical",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "workbench.panel.defaultLocation": "bottom",
+
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["p"],
+      "after": ["d", "P"]
+    }
+  ],
+
+  "vim.overrideCopy": true,
+
+  "keyboard.dispatch": "keyCode",
+
+  "vim.useSystemClipboard": true,
+
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    }
+  ],
+
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    }
+  ],
+
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    }
+  ],
+  "git.blame.statusBarItem.enabled": false,
+  "git.blame.editorDecoration.enabled": true,
+}
