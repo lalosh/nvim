@@ -1,14 +1,3 @@
-local inlay_hints_ok, inlay_hints = pcall(require, "lsp-inlayhints")
-if not inlay_hints_ok then
-  vim.notify("lsp-inlayhints is not installed")
-  return
-end
-
-inlay_hints.setup()
-
---------------
-
-
 local M = {}
 
 -------------------------
@@ -57,7 +46,7 @@ local function lsp_keymaps(bufnr)
 
 
 
-  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
+  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.format()' ]]
 end
 
 
@@ -105,8 +94,7 @@ end
 
 
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -------------------------
 -------------------------
@@ -121,7 +109,9 @@ M.on_attach = function(client, bufnr)
 
   setupDiagnostics()
 
-  inlay_hints.on_attach(client, bufnr)
+  if vim.lsp.inlay_hint then
+    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+  end
 
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded", })
 

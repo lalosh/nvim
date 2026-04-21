@@ -1,30 +1,30 @@
-require("mason").setup()
-local lspconfig = require("lspconfig")
-
-local shared_lsp_settings = require("lalosh.lsp-settings.shared")
-
-local jsonls_lsp_settings = require("lalosh.lsp-settings.jsonls").settings;
-local luals_lsp_settings = require("lalosh.lsp-settings.luals").settings;
-local tsserver_lsp_settings = require("lalosh.lsp-settings.tsserver").settings;
-
-
 local status_ok, _ = pcall(require, "cmp_nvim_lsp")
 if not status_ok then
   vim.notify('cmp_nvim_lsp is not installed')
   return
 end
 
+local shared_lsp_settings = require("lalosh.lsp-settings.shared")
 
+-- Set global defaults (capabilities) for all servers
+vim.lsp.config('*', {
+  capabilities = shared_lsp_settings.capabilities,
+})
 
+require("mason").setup()
+require("mason-lspconfig").setup()
 
-require("mason-lspconfig").setup_handlers {
+-- Configure specific servers explicitly
+require("lalosh.lsp-settings.jsonls").settings()
+require("lalosh.lsp-settings.luals").settings()
+require("lalosh.lsp-settings.tsserver").settings()
 
-  function(server_name) -- default handler (optional)
-    require("lspconfig")[server_name].setup {}
+-- Apply on_attach/keymaps to all LSP clients (including auto-enabled ones)
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client then
+      shared_lsp_settings.on_attach(client, args.buf)
+    end
   end,
-
-  ["jsonls"] = jsonls_lsp_settings,
-  ["lua_ls"] = luals_lsp_settings,
-  ["ts_ls"] = tsserver_lsp_settings,
-
-}
+})

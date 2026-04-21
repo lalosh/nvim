@@ -81,9 +81,6 @@ return packer.startup(function(use)
   -- to hook a system-binary formatter into neovim
   use 'mhartington/formatter.nvim'
 
-  -- add inlay hints support for the LSP that support it
-  use "lvimuser/lsp-inlayhints.nvim"
-
 
   -- files finder
   --use "nvim-telescope/telescope.nvim"
@@ -138,6 +135,40 @@ return packer.startup(function(use)
   use 'LeonHeidelbach/trailblazer.nvim'
 
   use 'voldikss/vim-floaterm'
+
+  use {
+    'greggh/claude-code.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim', -- Required for git operations
+    },
+    config = function()
+      require('claude-code').setup({
+        window = {
+          position = 'float',
+          float = {
+            width = '85%',
+            height = '85%',
+            row = 'center',
+            col = 'center',
+            relative = 'editor',
+            border = 'rounded',
+          },
+        },
+        keymaps = {
+          toggle = {
+            normal = '<leader>cc',   -- open / close
+            terminal = '<leader>cc', -- close from inside claude
+            variants = {
+              continue = '<leader>cC', -- continue last session
+              resume = '<leader>cr',   -- pick a session to resume
+            },
+          },
+          window_navigation = true,
+          scrolling = true,
+        },
+      })
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
