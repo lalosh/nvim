@@ -116,3 +116,22 @@ keymap("n", "<leader>r", ":IncRename ", opts);
 --    autocmd BufWritePost * FormatWrite
  -- augroup END
 --]]
+
+
+vim.keymap.set('n', '<leader>cp', function()
+  local file = vim.fn.expand('%')
+  local line = vim.fn.line('.')
+  local text = string.format('@%s#%d', file, line)
+  vim.fn.setreg('+', text)
+  print('Copied: ' .. text)
+end, { desc = 'Copy filename with line number' })
+
+vim.keymap.set('v', '<leader>cp', function()
+  local start_line = vim.fn.line('v')
+  local end_line = vim.fn.line('.')
+  local file = vim.fn.expand('%')
+  local text = string.format('@%s#%d-%d', file, start_line, end_line)
+  vim.fn.setreg('+', text)
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Esc>', true, false, true), 'n', false)
+  print('Copied: ' .. text)
+end, { desc = 'Copy filename with line range' })
