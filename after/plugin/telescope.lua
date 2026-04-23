@@ -38,10 +38,22 @@ telescope.setup {
         ["<PageUp>"] = actions.results_scrolling_up,
         ["<PageDown>"] = actions.results_scrolling_down,
 
-        ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
-        ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
-        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-        ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+        ["<Tab>"] = function(prompt_bufnr)
+          actions.toggle_selection(prompt_bufnr)
+          actions.move_selection_worse(prompt_bufnr)
+        end,
+        ["<S-Tab>"] = function(prompt_bufnr)
+          actions.toggle_selection(prompt_bufnr)
+          actions.move_selection_better(prompt_bufnr)
+        end,
+        ["<C-a>"] = function(prompt_bufnr)
+          actions.send_to_qflist(prompt_bufnr)
+          actions.open_qflist(prompt_bufnr)
+        end,
+        ["<M-q>"] = function(prompt_bufnr)
+          actions.send_selected_to_qflist(prompt_bufnr)
+          actions.open_qflist(prompt_bufnr)
+        end,
         ["<C-l>"] = actions.complete_tag,
         ["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
       },
@@ -53,10 +65,22 @@ telescope.setup {
         ["<C-v>"] = actions.select_vertical,
         ["<C-t>"] = actions.select_tab,
 
-        ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
-        ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
-        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-        ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+        ["<Tab>"] = function(prompt_bufnr)
+          actions.toggle_selection(prompt_bufnr)
+          actions.move_selection_worse(prompt_bufnr)
+        end,
+        ["<S-Tab>"] = function(prompt_bufnr)
+          actions.toggle_selection(prompt_bufnr)
+          actions.move_selection_better(prompt_bufnr)
+        end,
+        ["<C-a>"] = function(prompt_bufnr)
+          actions.send_to_qflist(prompt_bufnr)
+          actions.open_qflist(prompt_bufnr)
+        end,
+        ["<M-q>"] = function(prompt_bufnr)
+          actions.send_selected_to_qflist(prompt_bufnr)
+          actions.open_qflist(prompt_bufnr)
+        end,
 
         ["j"] = actions.move_selection_next,
         ["k"] = actions.move_selection_previous,
